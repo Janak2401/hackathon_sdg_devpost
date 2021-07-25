@@ -1,0 +1,378 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Comfortaa', serif;
+  background-image: linear-gradient(
+    115deg,
+    #43cea2 ,
+    #185a9d);
+}
+
+/* Section 1 CSS */
+
+.main_header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("assets/bgimage.jpg");
+  background-size: cover;
+}
+
+.bg_layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.3;
+  top: 0px;
+  left: 0px;
+}
+
+.title_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_title {
+  font-size: 15vh;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 10vh;
+}
+
+/* Section-2 CSS*/
+
+.content_section {
+  margin: 0px 25px;
+}
+
+.top_section {
+  padding-top: 30px;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.top_title {
+  font-size: 44px;
+}
+
+.top_sub_title {
+  font-size: 32px;
+  padding-top: 5px;
+}
+
+.row_one {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row_two {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+
+.card_container {
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  width: 350px;
+  color: #ffffff;
+  background-color: #94B8DB;
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+
+.card_image_container {
+  height: 85%;
+  position: relative;
+}
+
+.card_image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.image_title {
+  font-size: 32px;
+  font-family: 'Comfortaa', serif;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.card_text {
+  height: 15%;
+  color: #000000;
+  text-align: center;
+}
+
+.subText {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Comfortaa', serif;
+  text-align: left;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+.card_button {
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s;
+  box-shadow: 0px 2px 14px -2px #000000;
+}
+
+.card_button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 24px 0px #6DBEFD;
+  cursor: pointer;
+}
+
+/* Section-3 CSS */
+
+.slideshow_container {
+  display: flex;
+  height: 600px;
+  width: 100%;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev, .next {
+  text-align: center;
+  width: 100px;
+  height: 110px;
+  color: #0E2239;
+  background-color: #F9F1EA;
+  font-weight: bold;
+  font-size: 44px;
+  transition: 0.5s ease;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.next {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.prev:hover, .next:hover {
+  cursor: pointer;
+  background-color: #83B8EC;
+  color: #000000;
+}
+
+.slideshow {
+  width: 80%;
+  height: 100%;
+}
+
+.slides {
+  position: relative;
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+.marine, .animals, .forest {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.ngo_name {
+  position: absolute;
+  width: 100px;
+  top: 10px;
+  left: 10px;
+  font-size: 56px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.ngo_button {
+  background-color: rgba(25, 84, 123, 0.8);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 28px;
+  border: 2px solid orange;
+  border-radius: 10px;
+  height: 50px;
+  width: 250px;
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+  transition: all 0.5s ease;
+}
+
+.ngo_button:hover {
+  cursor: pointer;
+  background-color: rgba(25, 84, 123, 1.0);
+  transform: scale(1.05);
+}
+
+.nav_dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0px 2px;
+  background-color: #f1faee;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.active, .nav_dot:hover{
+  background-color: #ffb703;
+}
+
+/*  Section-4 CSS */
+
+.section4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+
+.section4_form {
+  max-width: 1000px;
+  background: #fff;
+  width: 1000px;
+  height: 450px;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.section4_form .form_title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(
+    right,
+    #56d8e4,
+    #9f01ea,
+    #56d8e4,
+    #9f01ea
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section4_form form {
+  padding: 30px 0 0 0;
+}
+
+.section4_form form .form-row {
+  display: flex;
+  margin: 32px 0;
+}
+
+form .form-row .input-data {
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+
+form .form-row .textarea {
+  height: 70px;
+}
+
+.input-data input,
+.textarea textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label,
+.input-data input:valid ~ label,
+.textarea textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+}
+
+.textarea textarea {
+  resize: none;
+  padding-top: 10px;
+}
+
+.input-data label {
+  position: absolute;
+  pointer-events: none;
+  bottom: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.textarea label {
+  width: 100%;
+  bottom: 55px;
+  background: #fff;
+}
+
+.input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.input-data .underline:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #3498db;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.form_button {
+  height: 45px;
+  width: 135px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to right,
+    #56d8e4,
+    #9f01ea
+  );
+  color: #ffffff;
+  background-size: 200%;
+  background-position: left;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+
+.form_button:hover {
+  background-position: right;
+}

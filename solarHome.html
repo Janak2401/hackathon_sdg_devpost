@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Solar Homes</title>
+	<link rel="stylesheet" type="text/css" href="css/info.css">
+</head>
+<body>
+	<section class="info_section">
+		<button class="homeButton" onclick="window.location='index.html'">&#10094 Back</button>
+		<div class="info_container">
+			<div class="info_title">
+				Solar Homes
+			</div>
+			<br>
+			<div class="info_img_container">
+				<div class="imgSlides">
+				  <img src="images/sh_img.png" alt="Solar Homes" class="info_img">
+				</div>
+
+				<div class="imgSlides">
+				  <img src="images/sh_img2.png" alt="Solar Homes" class="info_img">
+				</div>
+
+				<div class="imgSlides">
+				  <img src="images/sh_img3.png" alt="Solar Homes" class="info_img">
+				</div>
+				<br>
+				<div style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				</div>
+			</div>
+			<br>
+			<div class="info_text">
+				Another great attraction that could be found all over in many parts are Solar homes. 
+				As the electricity demand is increasing every year, a better solution to this is switching to renemwable energy resource.
+				The residents who live in areas with adequate supply of sunlight have equipped their houses with solar panels which 
+				helps them generate their own energy. This type of green energy also lowers their carbon footprint. 
+				There is net metering which also allows them to sell back excess energy produced. They are also eligible for certain tax breaks. 
+				Not only is solar power good for the environment, but you can earn money selling back excess power to the grid. 
+				This has led to installation of solar power systems in nearly every household.
+			</div>
+		</div>
+	</section>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("imgSlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+		}
+	</script>
+</body>
+</html>

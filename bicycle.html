@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Bicycle Lanes</title>
+	<link rel="stylesheet" type="text/css" href="css/info.css">
+</head>
+<body>
+	<section class="info_section">
+		<button class="homeButton" onclick="window.location='index.html'">&#10094 Back</button>
+		<div class="info_container">
+			<div class="info_title">
+				Bicycle Lanes
+			</div>
+			<br>
+			<div class="info_img_container">
+				<div class="imgSlides">
+				  <img src="images/bl_img.png" alt="Bicycle Lanes" class="info_img">
+				</div>
+
+				<div class="imgSlides">
+				  <img src="images/bl_img2.png" alt="Bicycle Lanes" class="info_img">
+				</div>
+
+				<div class="imgSlides">
+				  <img src="images/bl_img3.png" alt="Bicycle Lanes" class="info_img">
+				</div>
+				<br>
+				<div style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				</div>
+			</div>
+			<br>
+			<div class="info_text">
+				The city promotes the people to use bicycles as an alternative to automobiles.
+				Long Bicycle lanes have been createad throughout the city for people to travel.
+				Bicycle Parks are established at various places for people to park and use authority granted bicycles for public transport.
+				These bicycle tracks also help in maintaining the health of the people of the city. Because of the friendly
+				bicycle culture on these lanes people often choose bicycles for automobiles to commute between places. This reduces 
+				the heavy traffic and the chances of jam filled roads.
+				Relatively low emission of the harmful gases from the automobiles also helps in the reduction of air pollution.
+			</div>
+		</div>
+	</section>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("imgSlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+		}
+	</script>
+</body>
+</html>

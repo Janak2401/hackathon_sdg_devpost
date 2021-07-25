@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Community Centre</title>
+	<link rel="stylesheet" type="text/css" href="css/info.css">
+</head>
+<body>
+	<section class="info_section">
+		<button class="homeButton" onclick="window.location='index.html'">&#10094 Back</button>
+		<div class="info_container">
+			<div class="info_title">
+				Community Centre
+			</div>
+			<br>
+			<div class="info_img_container">
+				<div class="imgSlides">
+				  <img src="images/cc_img.png" alt="Community Centre" class="info_img">
+				</div>
+
+				<div class="imgSlides">
+				  <img src="images/cc_img2.png" alt="Community Centre" class="info_img">
+				</div>
+
+				<div class="imgSlides">
+				  <img src="images/cc_img3.jpg" alt="Community Centre" class="info_img">
+				</div>
+				<br>
+				<div style="text-align:center">
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				  <span class="dot"></span> 
+				</div>
+			</div>
+			<br>
+			<div class="info_text">
+				Here at different times of the year, there are gatherings in the community centres.
+				The people meet each other and spend time together. They participate in various creative workshops which are held there. 
+				The festive-like atmosphere keeps the smile on everyone’s faces. Every year, an award ceremony is kept for 
+				the people to gather and appreciate the people of the city who have done exceptional things in their fields.
+				One award of it is recognizing the best environmental conscious resident in their society for that period of time.
+				This is done so the people of the city gets motivated to help in social cause. Winners are given some attractive, environment-friendly 
+				prizes as well as recognition by everyone.
+				There is often a positive competitive competition among the residents which also maintains harmony and happiness among everyone.
+			</div>
+		</div>
+	</section>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("imgSlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 2500); // Change image every 2.5 seconds
+		}
+	</script>
+</body>
+</html>

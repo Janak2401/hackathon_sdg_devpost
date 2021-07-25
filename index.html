@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>SDG</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+
+  <body>
+    <!-- Body Section-1 -->
+    <header class="main_header">
+      <div class="bg_layer"></div>
+      <div class="title_container">
+        <p class="main_title">Welcome to <span style="text-decoration: underline;">Arcady!</span></p>
+        <p class="subtitle">A sustainable and modern city</p>
+      </div>
+    </header>
+
+    <!--Body Section-2-->
+    <main class="content_section">
+      <section class="top_section">
+        <h1 class="top_title">Sustainable life is a victory of mankind</h1>
+        <h4 class="top_sub_title">Explore the top City-spots</h4>
+      </section>
+
+      <section class="row_one">
+        <button class="card_button" onclick="window.location='bicycle.html'">
+          <div class="card_container">
+            <div class="card_image_container">
+              <img
+                src="assets/bicycle_cover.png"
+                alt="bicycle_cover"
+                class="card_image"
+                draggable="false"
+              />
+              <h3 class="image_title">Bicycle Lanes</h3>
+            </div>
+            <div class="card_text">
+              <p class="subText">
+                Reduces green house gas emissions and saves valuable green space
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <button class="card_button" onclick="window.location='community.html'">
+          <div class="card_container">
+            <div class="card_image_container">
+              <img
+                src="assets/comcenter_cover.jpg"
+                alt="community center"
+                class="card_image"
+                draggable="false"
+              />
+              <h3 class="image_title">Community Centre</h3>
+            </div>
+            <div class="card_text">
+              <p class="subText">
+                A place for people of the city to meet and greet each other
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <button class="card_button" onclick="window.location='energyPark.html'">
+          <div class="card_container">
+            <div class="card_image_container">
+              <img
+                src="assets/energypark_cover.png"
+                alt="energypark_cover"
+                class="card_image"
+                draggable="false"
+              />
+              <h3 class="image_title">Energy Park</h3>
+            </div>
+            <div class="card_text">
+              <p class="subText">
+                Generating electricity with different nature-friendly approach
+              </p>
+            </div>
+          </div>
+        </button>
+      </section>
+
+      <br />
+      <br />
+      <br />
+
+      <section class="row_two">
+        <button class="card_button" onclick="window.location='solarHome.html'">
+          <div class="card_container">
+            <div class="card_image_container">
+              <img
+                src="assets/solarhome.png"
+                alt="solar home"
+                class="card_image"
+                draggable="false"
+              />
+              <h3 class="image_title">Solar Homes</h3>
+            </div>
+            <div class="card_text">
+              <p class="subText">
+                Bringing the power of the sun to your service
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <button class="card_button" onclick="window.location='urbanClean.html'">
+          <div class="card_container">
+            <div class="card_image_container">
+              <img
+                src="assets/urbanclean_cover.jpg"
+                alt="Urban Clean"
+                class="card_image"
+                draggable="false"
+              />
+              <h3 class="image_title">Urban Cleaning</h3>
+            </div>
+            <div class="card_text">
+              <p class="subText">
+                A clean city shows a clean community
+              </p>
+            </div>
+          </div>
+        </button>
+      </section>
+      <hr color="#005f73" height="2px">
+      <br>
+      <br>
+      <br>
+      <!-- Body Section-3 -->
+      <section class="slideshow_container">
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+
+        <div class="slideshow">
+          <div class="slides">
+            <img src="assets/marine.jpg" alt="Marine life" class="marine">
+            <p class="ngo_name">Marine Conservation Society</p>
+            <button class="ngo_button">Connect with Us</button>
+          </div>
+
+          <div class="slides">
+            <img src="assets/animals.webp" alt="Wildlife" class="animals">
+            <p class="ngo_name">Wildlife Conservation Society</p>
+            <button class="ngo_button">Connect with Us</button>
+          </div>
+
+          <div class="slides">
+            <img src="assets/forest.jpg" alt="Forest" class="forest">
+            <p class="ngo_name">Forest Conservation Society</p>
+            <button class="ngo_button">Connect with Us</button>
+          </div>
+        </div>
+        
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+      </section>
+      <br>
+      <div style="text-align: center;">
+        <span class="nav_dot" onclick="currentSlide(1)"></span>
+        <span class="nav_dot" onclick="currentSlide(2)"></span>
+        <span class="nav_dot" onclick="currentSlide(3)"></span>
+      </div>
+      <br>
+      <br>
+    </main>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("nav_dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+
+    <!-- Body Section-4 -->
+    <div class="section4">
+      <div class="section4_form">
+        <div class="form_title">
+          Your Suggestions for Sustainable City!
+        </div>
+
+        <form id="myForm">
+          <div class="form-row">
+            <div class="input-data">
+              <input type="text" required>
+              <div class="underline"></div>
+              <label for="">First Name</label>
+            </div>
+            <div class="input-data">
+              <input type="text" required>
+              <div class="underline"></div>
+              <label for="">Last Name</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-data">
+              <input type="text" required>
+              <div class="underline"></div>
+              <label for="">Email Address</label>
+            </div>
+            <div class="input-data">
+              <input type="tel" required>
+              <div class="underline"></div>
+              <label for="">Phone Number</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-data textarea">
+              <textarea rows="8" cols="80" required></textarea>
+              <br />
+              <div class="underline"></div>
+              <label for="">Your Suggestions</label>
+              <br />
+              <button class="form_button" onclick="myFunction()">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById("myForm").reset();
+      }
+    </script>
+
+  </body>
+</html>
